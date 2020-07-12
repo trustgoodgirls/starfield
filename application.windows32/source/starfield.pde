@@ -1,7 +1,8 @@
 Star[] stars = new Star[1000];
 
 void setup(){
-  size(1000, 1000);
+  //size(1000, 1000);
+  fullScreen();
   for (int i = 0; i < stars.length; i++){
     stars[i] = new Star();
   }

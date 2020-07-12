@@ -17,6 +17,7 @@ public class starfield extends PApplet {
 Star[] stars = new Star[1000];
 
 public void setup(){
+  //size(1000, 1000);
   
   for (int i = 0; i < stars.length; i++){
     stars[i] = new Star();
@@ -46,7 +47,7 @@ class Star {
   }
 
   public void update() {
-    z = z - 10;
+    z = z - 5;
     if (z < 1) {
       y = random(-width, width);
       x = random(-height, height);
@@ -76,10 +77,9 @@ class Star {
     line(px, py, sx, sy);
   }
 }
-
-  public void settings() {  size(1000, 1000); }
+  public void settings() {  fullScreen(); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--stop-color=#cccccc", "starfield" };
+    String[] appletArgs = new String[] { "--present", "--window-color=#666666", "--hide-stop", "starfield" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {

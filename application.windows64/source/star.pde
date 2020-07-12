@@ -13,7 +13,7 @@ class Star {
   }
 
   void update() {
-    z = z - 10;
+    z = z - 5;
     if (z < 1) {
       y = random(-width, width);
       x = random(-height, height);
